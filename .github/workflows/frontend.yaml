@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Use Node.js 18.x
         uses: actions/setup-node@v3
@@ -59,10 +59,10 @@ jobs:
           path: dist
 
       - name: checkout repository
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: settings deployment role
-      - uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::146193870787:role/vuejs-on-s3-frontend-deployment-role
           aws-region: ap-northeast-1
