@@ -29,9 +29,9 @@ jobs:
           node-version: '18.x'
 
       - name: npm install, build and test
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm test
+        run: npm ci
+        run: npm run build --if-present
+        run: npm test
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
@@ -68,4 +68,4 @@ jobs:
           aws-region: ap-northeast-1
       
       - name: deployment artifact
-      - run: aws s3 sync . s3://vuejs-on-s3-prod-static-bucket-rc6lki --exact-timestamps --region ap-northeast-1
+        run: aws s3 sync . s3://vuejs-on-s3-prod-static-bucket-rc6lki --exact-timestamps --region ap-northeast-1
